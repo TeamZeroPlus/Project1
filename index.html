@@ -9,12 +9,15 @@
 <body>
     <h1 style="text-align: center;">Pure Awesomeness</h1>
     <div style="text-align: center;"><img src="./rich.png"/></div>
+    <div style="text-align: center; font-size: 28px;"><span id="props"></span></div>
     <script>
-    
+    let prop = ["code wiz", "guru", "movie buff", "writer", "web dev master", "api expert", "insert all else"]
     setInterval(function(){
         let red = Math.floor(Math.random()*255)
         let green = Math.floor(Math.random()*255)
         let blue = Math.floor(Math.random()*255)
+        let index = Math.floor(Math.random()*prop.length);
+        document.querySelector("#props").textContent = prop[index];
         document.body.style.backgroundColor = `rgb(${red},${green},${blue})`
     }, 1000)
        
